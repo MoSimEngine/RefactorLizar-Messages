@@ -1,0 +1,41 @@
+plugins {
+  id "com.google.protobuf" version "0.8.17"
+  // id "com.eriwen.gradle.js" version "2.14.1"
+  id "java"
+}
+repositories {
+  mavenCentral()
+  jcenter()
+  mavenLocal()
+}
+
+dependencies {
+  implementation 'com.google.protobuf:protobuf-java:+'
+  implementation 'io.grpc:grpc-stub:+'
+  implementation 'io.grpc:grpc-protobuf:+'
+  if (JavaVersion.current().isJava9Compatible()) {
+    // Workaround for @javax.annotation.Generated
+    // see: https://github.com/grpc/grpc-java/issues/3633
+    implementation 'javax.annotation:javax.annotation-api:+'
+  }
+}
+protobuf {
+     protoc {
+         artifact = "com.google.protobuf:protoc:3.5.1-1"
+     }
+     generatedFilesBaseDir = "$projectDir/src/generated"
+  generateProtoTasks {
+    all().each { task ->
+      task.builtins {
+        js {
+          // These options are copied as an example from the previously linked doc, which says
+          // "protoc --proto_path=src --js_out=import_style=commonjs,binary:build/gen src/foo.proto src/bar/baz.proto"
+          // They are interpreted by protoc. I don't know what they mean. You will need to figure out
+          // what options you need.
+          option "import_style=commonjs"
+          option "binary"
+        }
+      }
+    }
+  }
+}
