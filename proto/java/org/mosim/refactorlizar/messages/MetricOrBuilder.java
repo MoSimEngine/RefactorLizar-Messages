@@ -9,16 +9,19 @@ public interface MetricOrBuilder extends
 
   /**
    * <code>double cohesion = 1;</code>
+   * @return The cohesion.
    */
   double getCohesion();
 
   /**
    * <code>double complexity = 2;</code>
+   * @return The complexity.
    */
   double getComplexity();
 
   /**
    * <code>double coupling = 3;</code>
+   * @return The coupling.
    */
   double getCoupling();
 }

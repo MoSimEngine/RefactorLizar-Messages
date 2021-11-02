@@ -9,10 +9,12 @@ public interface ArchitectureEvaluationRequestOrBuilder extends
 
   /**
    * <code>.org.mosim.refactorlizar.messages.Project project = 1;</code>
+   * @return Whether the project field is set.
    */
   boolean hasProject();
   /**
    * <code>.org.mosim.refactorlizar.messages.Project project = 1;</code>
+   * @return The project.
    */
   org.mosim.refactorlizar.messages.Project getProject();
   /**
@@ -22,10 +24,12 @@ public interface ArchitectureEvaluationRequestOrBuilder extends
 
   /**
    * <code>.org.mosim.refactorlizar.messages.Offset offset = 2;</code>
+   * @return The enum numeric value on the wire for offset.
    */
   int getOffsetValue();
   /**
    * <code>.org.mosim.refactorlizar.messages.Offset offset = 2;</code>
+   * @return The offset.
    */
   org.mosim.refactorlizar.messages.Offset getOffset();
 }

@@ -6,7 +6,7 @@ package org.mosim.refactorlizar.messages;
 /**
  * Protobuf type {@code org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse}
  */
-public  final class ArchitectureEvaluationResponse extends
+public final class ArchitectureEvaluationResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse)
     ArchitectureEvaluationResponseOrBuilder {
@@ -16,6 +16,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ArchitectureEvaluationResponse() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ArchitectureEvaluationResponse();
   }
 
   @java.lang.Override
@@ -31,7 +38,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -42,13 +48,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             org.mosim.refactorlizar.messages.Error.Builder subBuilder = null;
             if (error_ != null) {
@@ -75,6 +74,13 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -92,6 +98,7 @@ private static final long serialVersionUID = 0L;
     return org.mosim.refactorlizar.messages.Messages.internal_static_org_mosim_refactorlizar_messages_ArchitectureEvaluationResponse_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return org.mosim.refactorlizar.messages.Messages.internal_static_org_mosim_refactorlizar_messages_ArchitectureEvaluationResponse_fieldAccessorTable
@@ -103,19 +110,24 @@ private static final long serialVersionUID = 0L;
   private org.mosim.refactorlizar.messages.Error error_;
   /**
    * <code>.org.mosim.refactorlizar.messages.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
+  @java.lang.Override
   public boolean hasError() {
     return error_ != null;
   }
   /**
    * <code>.org.mosim.refactorlizar.messages.Error error = 1;</code>
+   * @return The error.
    */
+  @java.lang.Override
   public org.mosim.refactorlizar.messages.Error getError() {
     return error_ == null ? org.mosim.refactorlizar.messages.Error.getDefaultInstance() : error_;
   }
   /**
    * <code>.org.mosim.refactorlizar.messages.Error error = 1;</code>
    */
+  @java.lang.Override
   public org.mosim.refactorlizar.messages.ErrorOrBuilder getErrorOrBuilder() {
     return getError();
   }
@@ -124,24 +136,30 @@ private static final long serialVersionUID = 0L;
   private org.mosim.refactorlizar.messages.Metric metrics_;
   /**
    * <code>.org.mosim.refactorlizar.messages.Metric metrics = 2;</code>
+   * @return Whether the metrics field is set.
    */
+  @java.lang.Override
   public boolean hasMetrics() {
     return metrics_ != null;
   }
   /**
    * <code>.org.mosim.refactorlizar.messages.Metric metrics = 2;</code>
+   * @return The metrics.
    */
+  @java.lang.Override
   public org.mosim.refactorlizar.messages.Metric getMetrics() {
     return metrics_ == null ? org.mosim.refactorlizar.messages.Metric.getDefaultInstance() : metrics_;
   }
   /**
    * <code>.org.mosim.refactorlizar.messages.Metric metrics = 2;</code>
    */
+  @java.lang.Override
   public org.mosim.refactorlizar.messages.MetricOrBuilder getMetricsOrBuilder() {
     return getMetrics();
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -151,6 +169,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (error_ != null) {
@@ -162,6 +181,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -190,19 +210,18 @@ private static final long serialVersionUID = 0L;
     }
     org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse other = (org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse) obj;
 
-    boolean result = true;
-    result = result && (hasError() == other.hasError());
+    if (hasError() != other.hasError()) return false;
     if (hasError()) {
-      result = result && getError()
-          .equals(other.getError());
+      if (!getError()
+          .equals(other.getError())) return false;
     }
-    result = result && (hasMetrics() == other.hasMetrics());
+    if (hasMetrics() != other.hasMetrics()) return false;
     if (hasMetrics()) {
-      result = result && getMetrics()
-          .equals(other.getMetrics());
+      if (!getMetrics()
+          .equals(other.getMetrics())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -295,6 +314,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -302,6 +322,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -325,6 +346,7 @@ private static final long serialVersionUID = 0L;
       return org.mosim.refactorlizar.messages.Messages.internal_static_org_mosim_refactorlizar_messages_ArchitectureEvaluationResponse_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return org.mosim.refactorlizar.messages.Messages.internal_static_org_mosim_refactorlizar_messages_ArchitectureEvaluationResponse_fieldAccessorTable
@@ -347,6 +369,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (errorBuilder_ == null) {
@@ -364,15 +387,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return org.mosim.refactorlizar.messages.Messages.internal_static_org_mosim_refactorlizar_messages_ArchitectureEvaluationResponse_descriptor;
     }
 
+    @java.lang.Override
     public org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse getDefaultInstanceForType() {
       return org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse.getDefaultInstance();
     }
 
+    @java.lang.Override
     public org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse build() {
       org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse result = buildPartial();
       if (!result.isInitialized()) {
@@ -381,6 +407,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse buildPartial() {
       org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse result = new org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse(this);
       if (errorBuilder_ == null) {
@@ -397,32 +424,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse) {
         return mergeFrom((org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse)other);
@@ -445,10 +479,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -467,17 +503,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private org.mosim.refactorlizar.messages.Error error_ = null;
+    private org.mosim.refactorlizar.messages.Error error_;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.mosim.refactorlizar.messages.Error, org.mosim.refactorlizar.messages.Error.Builder, org.mosim.refactorlizar.messages.ErrorOrBuilder> errorBuilder_;
     /**
      * <code>.org.mosim.refactorlizar.messages.Error error = 1;</code>
+     * @return Whether the error field is set.
      */
     public boolean hasError() {
       return errorBuilder_ != null || error_ != null;
     }
     /**
      * <code>.org.mosim.refactorlizar.messages.Error error = 1;</code>
+     * @return The error.
      */
     public org.mosim.refactorlizar.messages.Error getError() {
       if (errorBuilder_ == null) {
@@ -584,17 +622,19 @@ private static final long serialVersionUID = 0L;
       return errorBuilder_;
     }
 
-    private org.mosim.refactorlizar.messages.Metric metrics_ = null;
+    private org.mosim.refactorlizar.messages.Metric metrics_;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.mosim.refactorlizar.messages.Metric, org.mosim.refactorlizar.messages.Metric.Builder, org.mosim.refactorlizar.messages.MetricOrBuilder> metricsBuilder_;
     /**
      * <code>.org.mosim.refactorlizar.messages.Metric metrics = 2;</code>
+     * @return Whether the metrics field is set.
      */
     public boolean hasMetrics() {
       return metricsBuilder_ != null || metrics_ != null;
     }
     /**
      * <code>.org.mosim.refactorlizar.messages.Metric metrics = 2;</code>
+     * @return The metrics.
      */
     public org.mosim.refactorlizar.messages.Metric getMetrics() {
       if (metricsBuilder_ == null) {
@@ -700,11 +740,13 @@ private static final long serialVersionUID = 0L;
       }
       return metricsBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -726,6 +768,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ArchitectureEvaluationResponse>
       PARSER = new com.google.protobuf.AbstractParser<ArchitectureEvaluationResponse>() {
+    @java.lang.Override
     public ArchitectureEvaluationResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -743,6 +786,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public org.mosim.refactorlizar.messages.ArchitectureEvaluationResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

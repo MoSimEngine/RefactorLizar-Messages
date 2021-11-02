@@ -9,10 +9,12 @@ public interface ArchitectureEvaluationResponseOrBuilder extends
 
   /**
    * <code>.org.mosim.refactorlizar.messages.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
   boolean hasError();
   /**
    * <code>.org.mosim.refactorlizar.messages.Error error = 1;</code>
+   * @return The error.
    */
   org.mosim.refactorlizar.messages.Error getError();
   /**
@@ -22,10 +24,12 @@ public interface ArchitectureEvaluationResponseOrBuilder extends
 
   /**
    * <code>.org.mosim.refactorlizar.messages.Metric metrics = 2;</code>
+   * @return Whether the metrics field is set.
    */
   boolean hasMetrics();
   /**
    * <code>.org.mosim.refactorlizar.messages.Metric metrics = 2;</code>
+   * @return The metrics.
    */
   org.mosim.refactorlizar.messages.Metric getMetrics();
   /**

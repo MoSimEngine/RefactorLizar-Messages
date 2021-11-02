@@ -9,38 +9,50 @@ public interface ProjectOrBuilder extends
 
   /**
    * <code>repeated string language_paths = 1;</code>
+   * @return A list containing the languagePaths.
    */
   java.util.List<java.lang.String>
       getLanguagePathsList();
   /**
    * <code>repeated string language_paths = 1;</code>
+   * @return The count of languagePaths.
    */
   int getLanguagePathsCount();
   /**
    * <code>repeated string language_paths = 1;</code>
+   * @param index The index of the element to return.
+   * @return The languagePaths at the given index.
    */
   java.lang.String getLanguagePaths(int index);
   /**
    * <code>repeated string language_paths = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the languagePaths at the given index.
    */
   com.google.protobuf.ByteString
       getLanguagePathsBytes(int index);
 
   /**
    * <code>repeated string simulator_paths = 2;</code>
+   * @return A list containing the simulatorPaths.
    */
   java.util.List<java.lang.String>
       getSimulatorPathsList();
   /**
    * <code>repeated string simulator_paths = 2;</code>
+   * @return The count of simulatorPaths.
    */
   int getSimulatorPathsCount();
   /**
    * <code>repeated string simulator_paths = 2;</code>
+   * @param index The index of the element to return.
+   * @return The simulatorPaths at the given index.
    */
   java.lang.String getSimulatorPaths(int index);
   /**
    * <code>repeated string simulator_paths = 2;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the simulatorPaths at the given index.
    */
   com.google.protobuf.ByteString
       getSimulatorPathsBytes(int index);
